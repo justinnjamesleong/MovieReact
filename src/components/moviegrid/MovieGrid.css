@@ -1,0 +1,11 @@
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .movie-poster{
+    width: 250px;
+    margin-bottom: 20px;
+  }

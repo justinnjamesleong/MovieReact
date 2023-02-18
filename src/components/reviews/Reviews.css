@@ -1,0 +1,93 @@
+body {
+    background-color: #eee
+}
+
+.rcard {
+    background-color: #fff;
+    border: none;
+    
+}
+
+.rform-color {
+    background-color: #fafafa
+}
+
+.rform-control {
+    height: 48px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #35b69f;
+    outline: 0;
+    box-shadow: none;
+    text-indent: 10px
+}
+
+.c-badge {
+    background-color: #35b69f;
+    color: white;
+    height: 20px;
+    font-size: 11px;
+    width: 92px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px
+}
+
+.submitbutton{background-color: #35b69f;
+    color: white;
+    height: 20px;
+    font-size: 11px;
+    width: 92px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    cursor: pointer;}
+
+    .submitbutton:hover {background-color: #90EC7C}
+    
+    .submitbutton:active {transform: translateY(4px);}
+    .flex-star-submitb-container{
+        display:flex;
+        align-items: center;
+    }
+
+  
+
+    .flex-child:first-child {
+        margin-right: 20px;
+    } 
+
+.comment-text {
+    font-size: 13px
+}
+
+.wish {
+    color: #35b69f
+}
+
+.user-feed {
+    font-size: 14px;
+    margin-top: 12px
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .on {
+    color: #FFDF00;
+  }
+  .off {
+    color: #ccc;
+  }

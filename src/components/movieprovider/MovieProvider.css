@@ -1,0 +1,15 @@
+.providerscontainer{
+
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.popcorn{
+
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
