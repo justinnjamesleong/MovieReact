@@ -10,7 +10,7 @@ const ForgetPass = (props) => {
     event.preventDefault();
 
     axios
-      .post(`http://localhost:8080/api/forget_password/${email}`)
+      .post(`http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/api/forget_password/${email}`)
       .then((response) => {
         console.log(response);
         // window.location = "/";

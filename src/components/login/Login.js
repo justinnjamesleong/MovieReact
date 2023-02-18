@@ -14,7 +14,7 @@ const Login = (props) => {
 
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/login/${username}/${password}`
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/api/login/${username}/${password}`
       );
 
       localStorage.setItem("accessToken", response.data.accessToken);

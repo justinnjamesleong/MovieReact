@@ -10,13 +10,13 @@ function UserList() {
   console.log(userId);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/employee/get-all").then((response) => {
+    axios.get("http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/api/employee/get-all").then((response) => {
       setUsers(response.data);
       console.log(users);
     });
 
     axios
-      .get(`http://localhost:8080/users/following/${userId}`)
+      .get(`http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/users/following/${userId}`)
       .then((response) => {
         setFollowing(response.data);
         console.log(following);
@@ -33,7 +33,7 @@ function UserList() {
 
   const handleFollow = (user) => {
     axios
-      .post("http://localhost:8080/social/save", {
+      .post("http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/social/save", {
         userId: userId,
         followingId: user.id,
       })
@@ -48,7 +48,7 @@ function UserList() {
 
   const handleUnfollow = (user) => {
     axios
-      .delete(`http://localhost:8080/social/delete/${userId}/${user.id}`)
+      .delete(`http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/social/delete/${userId}/${user.id}`)
       .then(() => {
         // Update the following status and button text
         setFollowing(following.filter((f) => f.id !== user.id));

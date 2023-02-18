@@ -23,7 +23,7 @@ const Reviews = (props) => {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8080/movie/review", {
+      const response = await fetch("http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/review", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const Reviews = (props) => {
     const fetchReviews = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/movie/review/${movie_id}`,
+          `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/review/${movie_id}`,
           {
             method: "GET",
           }

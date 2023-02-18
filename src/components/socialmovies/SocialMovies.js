@@ -41,7 +41,7 @@ const SocialMovies = ({ watchlist, watched, favourites }) => {
   useEffect(() => {
     const fetchResults = async () => {
       const response = await fetch(
-        `http://localhost:8080/movie/watchlist/user/${userid}`,
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/watchlist/user/${userid}`,
         { method: "GET" }
       );
 
@@ -55,7 +55,7 @@ const SocialMovies = ({ watchlist, watched, favourites }) => {
 
     const fetchWResults = async () => {
       const response = await fetch(
-        `http://localhost:8080/movie/watched/user/${userid}`,
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/watched/user/${userid}`,
         { method: "GET" }
       );
 
@@ -69,7 +69,7 @@ const SocialMovies = ({ watchlist, watched, favourites }) => {
 
     const fetchFResults = async () => {
       const response = await fetch(
-        `http://localhost:8080/movie/favourite/user/${userid}`,
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/favourite/user/${userid}`,
         { method: "GET" }
       );
 

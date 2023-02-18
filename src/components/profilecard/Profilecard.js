@@ -18,7 +18,7 @@ const Profilecard = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const result = await axios.get(
-        `http://localhost:8080/api/user/edit/${userId}`
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/api/user/edit/${userId}`
       );
       console.log(result);
       console.log(result.data);
@@ -40,7 +40,7 @@ const Profilecard = () => {
     formData.append("description", description);
     formData.append("avatar", avatar);
 
-    fetch(`http://localhost:8080/api/user/edit/${userId}`, {
+    fetch(`http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/api/user/edit/${userId}`, {
       method: "PUT",
       body: formData,
     })

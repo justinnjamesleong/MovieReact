@@ -17,7 +17,7 @@ const Provider = () => {
   useEffect(() => {
     const fetchProviderData = async () => {
       const response = await fetch(
-        `http://localhost:8080/tmdbprovider/${movieId}`,
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/tmdbprovider/${movieId}`,
         {
           method: "GET",
         }
@@ -33,7 +33,7 @@ const Provider = () => {
       console.log(alteredtitle);
       console.log(movieTitle);
       const response = await fetch(
-        `http://localhost:8080/provider/popcornscraper/${movieTitle}`,
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/provider/popcornscraper/${movieTitle}`,
         {
           method: "GET",
         }

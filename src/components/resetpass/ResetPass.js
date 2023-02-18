@@ -20,7 +20,7 @@ const ResetPass = () => {
   useEffect(() => {
     const sendToken = async () => {
       const result = await axios.post(
-        `http://localhost:8080/api/reset_password/${token}`
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/api/reset_password/${token}`
       );
       console.log(result);
       setResult(result.data);
@@ -41,7 +41,7 @@ const ResetPass = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/updateUser/${rpassword}`,
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/api/updateUser/${rpassword}`,
         {
           id: rid,
           name: rname,

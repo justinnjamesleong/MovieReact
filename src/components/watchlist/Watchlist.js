@@ -11,7 +11,7 @@ const EyeIcon = (props) => {
   useEffect(() => {
     const fetchIsWatchlist = async () => {
       const result = await axios.get(
-        `http://localhost:8080/movie/watchlater/${userId}/${movieId}`
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/watchlater/${userId}/${movieId}`
       );
 
       setWatchlistId(result.data.id);
@@ -26,11 +26,11 @@ const EyeIcon = (props) => {
     if (isWatchlist) {
       // Call delete endpoint
       await axios.delete(
-        `http://localhost:8080/movie/watchlater/${userId}/${movieId}`
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/watchlater/${userId}/${movieId}`
       );
     } else {
       // Call save endpoint
-      await axios.post("http://localhost:8080/movie/watchlater", {
+      await axios.post("http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/watchlater", {
         movieId: movieId,
         userId: userId,
         updatedate: new Date(),

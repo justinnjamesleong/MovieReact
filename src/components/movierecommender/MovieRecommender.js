@@ -43,7 +43,7 @@ const MovieRecommender = ({ watchlist, watched, favourites }) => {
   useEffect(() => {
     const fetchFavouriteResults = async () => {
       const response = await fetch(
-        `http://localhost:8080/movie/favourite/user/${userid}`,
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/favourite/user/${userid}`,
         { method: "GET" }
       );
 
@@ -85,7 +85,7 @@ const MovieRecommender = ({ watchlist, watched, favourites }) => {
   const fetchRecommendations = async (movieName) => {
     if (!movieName) return;
 
-    const response = await fetch("http://localhost:5000/recommend", {
+    const response = await fetch("http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/recommend", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

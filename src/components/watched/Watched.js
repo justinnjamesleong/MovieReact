@@ -11,7 +11,7 @@ const EyeIcon = (props) => {
   useEffect(() => {
     const fetchIsWatched = async () => {
       const result = await axios.get(
-        `http://localhost:8080/movie/watched/${userId}/${movieId}`
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/watched/${userId}/${movieId}`
       );
       console.log("Fetching watched....");
       setWatchedId(result.data.id);
@@ -28,11 +28,11 @@ const EyeIcon = (props) => {
       console.log(userId);
       console.log(movieId);
       await axios.delete(
-        `http://localhost:8080/movie/watched/${userId}/${movieId}`
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/watched/${userId}/${movieId}`
       );
     } else {
       // Call save endpoint
-      await axios.post("http://localhost:8080/movie/watched", {
+      await axios.post("http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/watched", {
         movieId: movieId,
         userId: userId,
         fromDate: new Date(),

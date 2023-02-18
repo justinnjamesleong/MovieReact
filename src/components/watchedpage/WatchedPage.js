@@ -10,7 +10,7 @@ const WatchedPage = () => {
   useEffect(() => {
     const fetchResults = async () => {
       const response = await fetch(
-        `http://localhost:8080/movie/watched/user/${userid}`,
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/watched/user/${userid}`,
         { method: "GET" }
       );
 

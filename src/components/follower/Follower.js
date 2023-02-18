@@ -11,7 +11,7 @@ function Follower() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/users/followers/${userId}`)
+      .get(`http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/users/followers/${userId}`)
       .then((response) => {
         setFollowers(response.data);
         console.log(followers);
@@ -28,7 +28,7 @@ function Follower() {
 
   const handleFollow = (user) => {
     axios
-      .post("http://localhost:8080/social/save", {
+      .post("http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/social/save", {
         userId: userId,
         followingId: user.id,
       })
@@ -43,7 +43,7 @@ function Follower() {
 
   const handleUnfollow = (user) => {
     axios
-      .delete(`http://localhost:8080/social/delete/${userId}/${user.id}`)
+      .delete(`http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/social/delete/${userId}/${user.id}`)
       .then(() => {
         // Update the following status and button text
         setFollowing(following.filter((f) => f.id !== user.id));

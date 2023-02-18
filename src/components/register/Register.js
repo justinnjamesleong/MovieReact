@@ -13,7 +13,7 @@ const Register = (props) => {
     event.preventDefault();
 
     axios
-      .post("http://localhost:8080/api/save", {
+      .post("http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/api/save", {
         name,
         email,
         password,

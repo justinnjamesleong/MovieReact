@@ -48,7 +48,7 @@ const MovieDetail = () => {
 
     const fetchIsFavorited = async () => {
       const result = await axios.get(
-        `http://localhost:8080/movie/favourite/${userId}/${id}`
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/favourite/${userId}/${id}`
       );
       console.log("Fetching favourited.....");
       setFavouriteId(result.data.id);
@@ -66,14 +66,14 @@ const MovieDetail = () => {
     if (isFavorited) {
       // Call delete endpoint
       await axios.delete(
-        `http://localhost:8080/movie/favourite/${userId}/${id}`
+        `http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/favourite/${userId}/${id}`
       );
     } else {
       // Call save endpoint
       console.log(id);
       console.log(userId);
       console.log(new Date());
-      await axios.post("http://localhost:8080/movie/favourite", {
+      await axios.post("http://team5adproject-env.eba-ccrqpkpw.ap-northeast-1.elasticbeanstalk.com/movie/favourite", {
         movieId: id,
         userId: userId,
         fromDate: new Date(),
